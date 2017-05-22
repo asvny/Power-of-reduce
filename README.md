@@ -2,7 +2,7 @@
 
 Most of ECMAScript 2015 `Array methods` using `array.reduce`
 
-###Map
+### Map
 ```js
 const map = (fn,arr) => arr.reduce((arr,curr)=>{
   arr.push(fn(curr));
@@ -10,7 +10,7 @@ const map = (fn,arr) => arr.reduce((arr,curr)=>{
 },[])
 ```
 
-###Filter
+### Filter
 ```js
 const filter = (fn,arr) => arr.reduce((arr,curr)=>{
   !!fn(curr) ? arr.push(curr) : void 0
@@ -18,21 +18,21 @@ const filter = (fn,arr) => arr.reduce((arr,curr)=>{
 },[]);
 ```
 
-###Some
+### Some
 ```js
 const some = (fn,arr) =>  arr.reduce((bool,curr)=>{
   return !!fn(curr) || bool ? true : false
 },false);
 ```
 
-###Every
+### Every
 ```js
 const every = (fn,arr) =>  arr.reduce((bool,curr)=>{
   return !!fn(curr) && bool ? true : false
 },true);
 ```
 
-###Contains
+### Contains
 ```js
 const contains = (val,arr) =>  arr.reduce((bool,curr)=>{
   return curr === val || bool ? true : false ;
